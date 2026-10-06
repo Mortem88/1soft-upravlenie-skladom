@@ -2,7 +2,7 @@
 <html lang="ru">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Статусные иконки WMS 1SOFT — градиентный набор</title>
+<title>Статусные иконки «1SOFT:Управление складом» — градиентный набор</title>
 <style>
   :root{
     --bg:#eef3fa; --panel:#ffffff; --border:#e0e8f3;
@@ -119,18 +119,18 @@
 </style>
 
 <header>
-  <p class="eyebrow">ПП 1SOFT · WMS · статусы и состояния</p>
+  <p class="eyebrow">1SOFT:Управление складом · статусы и состояния</p>
   <h1>Статусные иконки: градиентный набор</h1>
   <div class="sub">18 пиктограмм трёх групп. Формы и подача те же, что в плоском наборе, но плоская заливка заменена <b>градиентом</b>: блик сверху-слева, глубокая тень снизу-справа. Переход идёт <b>сквозь всю иконку</b>, а не по каждой детали отдельно, поэтому фургон с колёсами и календарь с кольцами читаются как один предмет.
   <br><br>Градиент здесь не осветление: размах подобран расчётом так, чтобы <b>в среднем по пятну иконка была контрастнее плоской заливки</b>, а слабый край перехода не опускался ниже порога. Цифры — в разделе «Контраст с фоном»: после градиента контраст вырос у всех двенадцати тонов.
   <br><br>Каждая клетка — <b>реальный PNG с альфа-каналом</b>, отрисованный из вектора в своём натуральном размере. Размеры: <span class="mono">14 · 16 · 20 · 24 · 28 · 32 · 48 · 64 px</span>. Палитр две: основная и осветлённая под тёмный интерфейс.</div>
-  <p><a class="dl" href="wms-status-icons-gradient.zip" download>Скачать набор <span>· PNG 14–64 px обеих палитр + SVG</span></a></p>
+  <p><a class="dl" href="1soft-sklad-status-icons-gradient.zip" download>Скачать набор <span>· PNG 14–64 px обеих палитр + SVG</span></a></p>
   <div class="theme" role="group" aria-label="Тема страницы">
     <button data-t="auto" aria-pressed="true">Авто</button>
     <button data-t="light" aria-pressed="false">Светлая</button>
     <button data-t="dark" aria-pressed="false">Тёмная</button>
   </div>
-  <p class="swap"><a href="../status-color/">Плоский цветной вариант</a> &nbsp;·&nbsp; <a href="../status-flat/">Монохромный</a> &nbsp;·&nbsp; <a href="../status/">Объёмный</a> &nbsp;·&nbsp; <a href="../">Иконки разделов WMS</a></p>
+  <p class="swap"><a href="../status-color/">Плоский цветной вариант</a> &nbsp;·&nbsp; <a href="../status-flat/">Монохромный</a> &nbsp;·&nbsp; <a href="../status/">Объёмный</a> &nbsp;·&nbsp; <a href="../">Иконки разделов</a></p>
 </header>
 
 <div class="wrap">
@@ -368,11 +368,11 @@
       if (t === 'auto') document.documentElement.removeAttribute('data-theme');
       else document.documentElement.setAttribute('data-theme', t);
       for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-pressed', String(btns[j] === this));
-      try { localStorage.setItem('wms-icons-theme', t); } catch (e) {}
+      try { localStorage.setItem('sklad-icons-theme', t); } catch (e) {}
     };
   }
   try {
-    var saved = localStorage.getItem('wms-icons-theme');
+    var saved = localStorage.getItem('sklad-icons-theme');
     if (saved) for (var k = 0; k < btns.length; k++) if (btns[k].getAttribute('data-t') === saved) btns[k].click();
   } catch (e) {}
 
